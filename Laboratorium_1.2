@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main2 {
+    public static void main(String[] args) {
+        System.out.println("Podaj znak piramidy: ");
+        Scanner scanner = new Scanner(System.in);
+        String znakPiramidy = scanner.next();
+        System.out.println(znakPiramidy);
+        int wysokoscPiramidy = scanner.nextInt();
+        for(int i =0;i<wysokoscPiramidy;i++) {
+            StringBuilder pietro = new StringBuilder();
+            for (int j = 0; j < wysokoscPiramidy-i-1; j++)
+            {
+                pietro.append(' ');
+            }
+            for (int k = 0; k <2*i+1; k++)
+            {
+                pietro.append(znakPiramidy);
+            }
+            System.out.println(pietro);
+        }
+    }
+}
