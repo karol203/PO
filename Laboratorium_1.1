@@ -1,0 +1,69 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static int minimumValue(ArrayList<Integer> lista){
+        int minimum = lista.get(0);
+        for(int i=0;i< lista.size();i++){
+            if(minimum>lista.get(i)) {
+                minimum = lista.get(i);
+            }
+        }
+        return minimum;
+    }
+    public static double Average(ArrayList<Double> lista){
+        if(lista.isEmpty()==true)
+        {
+            return 0;
+        }
+        else
+        {
+            double liczby=0;
+            for(int i=0;i< lista.size();i++)
+            {
+                liczby += lista.get(i);
+            }
+            return liczby/lista.size();
+        }
+    }
+    public static void main(String[] args) {
+        int liczbaCalkowita = 0;
+        float liczbaZmiennoprzecinkowa = 0.0f;
+        double liczbaZmiennoprzecinkowaPodwojnaPrecyzja = 0.0;
+        boolean PrawdaFalsz = false;
+        char znak = '0';
+        long liczbaCalkowita64bit = 0;
+        short liczbaCalkowita16bit = 0;
+        byte liczbaCalkowita8bit = 0;
+
+        int[] tablicaLiczbCalkowitych = {1,2,3};
+        int[] pustatablica = new int[1];
+        pustatablica[0] = 15;
+        //System.out.println(pustatablica[0]);
+
+        ArrayList<Integer> listaTablicowaIntow = new ArrayList<>();
+        listaTablicowaIntow.add(1);
+        listaTablicowaIntow.add(1);
+        listaTablicowaIntow.add(1);
+        listaTablicowaIntow.add(1);
+        listaTablicowaIntow.add(1);
+        //System.out.println(listaTablicowaIntow.get(3));
+
+        ArrayList<Integer> tablica10liczb =new ArrayList<>();
+        for(int i=0;i<10;i++)
+        {
+            tablica10liczb.add(i);
+        }
+        //System.out.println(tablica10liczb.reversed());
+        //System.out.println(minimumValue(tablica10liczb));
+
+        //Zadanie 3
+        ArrayList<Double> tablica2 = new ArrayList<>();
+        tablica2.add(3.5);
+        tablica2.add(2.5);
+        tablica2.add(4.5);
+        tablica2.add(5.5);
+        tablica2.add(4.5);
+        tablica2.add(3.5);
+        System.out.println(Average(tablica2));
+    }
+}
